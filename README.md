@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Commands to install
+
+    bundle install
+    rails generate rspec:install
+
+# Command to test
+
+    bundle exec rspec
+
