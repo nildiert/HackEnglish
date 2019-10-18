@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :achievements, only: [:index]
   get '/health', to: 'health#health'
 
   resources :roles, only: [:index, :show, :create, :update, :destroy]
@@ -16,5 +18,5 @@ Rails.application.routes.draw do
   # user_project
   # task_assignment
   # check_task_assignment
-  # 
+
 end
