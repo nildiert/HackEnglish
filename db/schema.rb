@@ -80,13 +80,6 @@ ActiveRecord::Schema.define(version: 2019_10_18_160635) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "rols", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.integer "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "task_assignments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "finished_at"
     t.integer "finished"
