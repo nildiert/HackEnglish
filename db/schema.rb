@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_18_160635) do
+ActiveRecord::Schema.define(version: 2019_10_19_201806) do
 
   create_table "achievements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "project_id"
@@ -50,8 +50,10 @@ ActiveRecord::Schema.define(version: 2019_10_18_160635) do
     t.string "title"
     t.string "link"
     t.integer "position"
+    t.bigint "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_concepts_on_project_id"
   end
 
   create_table "levels", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -142,6 +144,7 @@ ActiveRecord::Schema.define(version: 2019_10_18_160635) do
   add_foreign_key "check_task_assignments", "checks"
   add_foreign_key "check_task_assignments", "task_assignments"
   add_foreign_key "checks", "tasks"
+  add_foreign_key "concepts", "projects"
   add_foreign_key "projects", "levels"
   add_foreign_key "task_assignments", "tasks"
   add_foreign_key "task_assignments", "user_projects"
