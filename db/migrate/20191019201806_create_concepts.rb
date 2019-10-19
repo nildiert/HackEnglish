@@ -5,6 +5,7 @@ class CreateConcepts < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :link
       t.integer :position
+      t.references :project, foreign_key: true
 
       t.timestamps
     end
