@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: [:create]
 
   # level
-  resources :concepts, only: [:index, :show, :create]
+  resources :concepts, only: [:index, :show, :create, :update]
   # project
   # task
   # check
