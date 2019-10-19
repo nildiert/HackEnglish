@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2019_10_19_201806) do
 
   create_table "achievements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "project_id"
-    t.integer "status"
+    t.integer "status", default: 1
     t.string "name"
     t.string "description"
     t.string "achievement_pic"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_10_19_201806) do
   end
 
   create_table "checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: 1
     t.string "title"
     t.string "answer"
     t.integer "position"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2019_10_19_201806) do
   end
 
   create_table "levels", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: 1
     t.string "title"
     t.string "description"
     t.datetime "created_at", null: false
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2019_10_19_201806) do
   end
 
   create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: 1
     t.string "name"
     t.string "description"
     t.integer "position"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 2019_10_19_201806) do
 
   create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
-    t.integer "status"
+    t.integer "status", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(version: 2019_10_19_201806) do
   end
 
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: 1
     t.string "title"
     t.string "description"
     t.string "exercise"
@@ -126,16 +126,16 @@ ActiveRecord::Schema.define(version: 2019_10_19_201806) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: 1
     t.string "email"
     t.string "password"
     t.string "first_name"
     t.string "last_name"
     t.string "profile_pic"
     t.string "description"
-    t.integer "score"
+    t.integer "score", default: 0
     t.string "auth_token"
-    t.bigint "role_id"
+    t.bigint "role_id", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["role_id"], name: "index_users_on_role_id"
