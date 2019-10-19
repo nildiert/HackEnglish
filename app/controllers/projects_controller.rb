@@ -46,6 +46,6 @@ class ProjectsController < ApplicationController
     end
 
     def update_params
-        params.require(:achievement).permit(:status, :name, :description, :position)
+        params.require(:achievement).permit(:name, :description, :position)
     end
 end
