@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # level
   resources :concepts, only: [:index, :show, :create, :update]
   # project
-  # task
+  resources :tasks, only: [:index, :show, :create, :update]
   # check
   # user
   # user_achievement
