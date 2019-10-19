@@ -7,14 +7,13 @@ Rails.application.routes.draw do
 
   resources :roles, only: [:index, :show, :create, :update, :destroy]
   resources :achievements, only: [:index, :show, :create, :update, :destroy]
-  resources :users, only: [:create]
-
-  # level
+  resources :users, only: [:index, :show, :create, :update, :destroy]
+  resources :levels, only: [:index, :show, :create, :update, :destroy]
   resources :concepts, only: [:index, :show, :create, :update]
+
   # project
   resources :tasks, only: [:index, :show, :create, :update]
   # check
-  # user
   # user_achievement
   # user_project
   # task_assignment
