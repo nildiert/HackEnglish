@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/health', to: 'health#health'
 
   resources :roles, only: [:index, :show, :create, :update, :destroy]
+  resources :users, only: [:create]
 
 
   # achievement 
