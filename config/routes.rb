@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   # level
   # concept
-  # project
+  resources :projects, only: [:index, :show, :create, :update, :destroy]
   # task
   # check
   # user
