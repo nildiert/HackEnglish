@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2019_10_19_201806) do
   end
 
   create_table "concepts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: 1
     t.string "title"
     t.string "link"
     t.integer "position"
