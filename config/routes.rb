@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :achievements, only: [:index]
   get '/health', to: 'health#health'
+  match 'signin', to: 'signin#signin', via: [:post]
 
   resources :roles, only: [:index, :show, :create, :update, :destroy]
   resources :users, only: [:create]
