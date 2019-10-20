@@ -24,7 +24,7 @@ class AchievementsController < ApplicationController
         render json: @achievements, status: :created
     end
 
-    # PUT /roles/{id}
+    # PUT /achievements/{id}
     def update
         @achievements = Achievement.find(params[:id])
         @achievements.update(update_params)
