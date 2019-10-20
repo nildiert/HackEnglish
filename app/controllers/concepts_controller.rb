@@ -1,12 +1,8 @@
 class ConceptsController < ApplicationController
-    # ESto es provisional
-    protect_from_forgery with: :null_session
 
-    # GET /roles/
-    # def index
-    #     @roles = Role.all   
-    #     render json: @roles, status: :ok 
-    # end
+    # Authentication
+    include Secured
+    before_action :authenticate_user!, only: [:index, :show, :create, :update, :destroy]
 
     # GET /concepts/
     def index

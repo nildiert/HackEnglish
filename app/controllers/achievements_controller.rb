@@ -1,6 +1,8 @@
 class AchievementsController < ApplicationController
-    # sin token provitional
-    protect_from_forgery with: :null_session
+
+    # Authentication
+    include Secured
+    before_action :authenticate_user!, only: [:index, :show, :create, :update, :destroy]
 
     # GET /achievements/
     def index

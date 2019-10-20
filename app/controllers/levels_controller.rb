@@ -1,6 +1,8 @@
 class LevelsController < ApplicationController
-    # ESto es provisional
-    protect_from_forgery with: :null_session
+
+    # Authentication
+    include Secured
+    before_action :authenticate_user!, only: [:index, :show, :create, :update, :destroy]
 
     # GET /levels/
     def index

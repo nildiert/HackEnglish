@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
-    # Esto es provisional
-    protect_from_forgery with: :null_session
+   
+    include Secured
+    before_action :authenticate_user!, only: [:update, :index, :show, :destroy, :create]
 
     # GET /tasks/
     def index
@@ -46,7 +47,7 @@ class TasksController < ApplicationController
     end
 
     def update_params
-        params.require(:task).permit(:title, :description, :exercise, :project_id, :position, :status)
+        params.require(:task).permit(:title, :description, :exercise, :project_id, :position, :status   )
     end
 
 end
