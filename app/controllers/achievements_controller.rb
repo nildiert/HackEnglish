@@ -42,7 +42,7 @@ class AchievementsController < ApplicationController
     private
 
     def create_params
-        params.require(:achievement).permit(:status, :name, :description, :achievement_pic, :points)
+        params.require(:achievement).permit(:name, :description, :achievement_pic, :points)
     end
 
     def update_params
