@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
+
+  include Secured
+  before_action :authenticate_user!, only: [:update, :index, :show, :destroy]
   # ESto es provisional
-  protect_from_forgery with: :null_session
+  #protect_from_forgery with: :null_session
    
   # GET /users/
   def index
@@ -12,16 +15,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     if @user
-        render json: @user, status: :ok
+      render json: @user, status: :ok
     else
-        render json:  {error: 'Not Found'}, status: :not_found
+      render json:  {error: 'Not Found'}, status: :not_found
     end
-  end
-   
-  # POST /users
-  def create
-    @user = User.create(create_params)
-    render json: @user, status: :created
   end
 
   # PUT /users/{id}
@@ -39,10 +36,6 @@ class UsersController < ApplicationController
   end
 
   private
-   
-  def create_params
-    params.require(:user).permit(:role_id, :email, :password, :first_name, :last_name, :profile_pic, :description, :score)
-  end
 
   def update_params
     params.require(:user).permit(:role_id, :email, :password, :first_name, :last_name, :profile_pic, :description, :score, :status)
