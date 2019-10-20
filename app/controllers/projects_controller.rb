@@ -5,14 +5,14 @@ class ProjectsController < ApplicationController
     # GET /projects/
     def index
         @projects = Project.all
-        render json: @project, status: :ok
+        render json: @projects, status: :ok
     end
 
     # GET /projectss/{id}
     def show
-        @projects = Project.find_by(id: params[:id])
-        if @projects
-            render json: @projects, status: :ok
+        @project = Project.find_by(id: params[:id])
+        if @project
+            render json: @project, status: :ok
         else
             render json: {error: 'Not Found'}, status: :not_found
         end
@@ -20,21 +20,21 @@ class ProjectsController < ApplicationController
 
     # CREATE /projects
     def create
-        @projects = Project.create(create_params)
-        render json: @projects, status: :created
+        @project = Project.create(create_params)
+        render json: @project, status: :created
     end
 
     # PUT /projects/{id}
     def update
-        @projects = Project.find(params[:id])
-        @projects.update(update_params)
-        render json: @projects, status: :ok
+        @project = Project.find(params[:id])
+        @project.update(update_params)
+        render json: @project, status: :ok
     end
 
     # DELETE /projects/{id}
     def destroy
-        @projects = Project.find(params[:id])
-        @projects.destroy
+        @project = Project.find(params[:id])
+        @project.destroy
         render json: {message: 'Eliminated'}, status: :ok
     end
 
@@ -42,10 +42,10 @@ class ProjectsController < ApplicationController
     private
 
     def create_params
-        params.require(:achievement).permit(:status, :name, :description, :position)
+        params.require(:project).permit(:name, :description, :position, :level_id)
     end
 
     def update_params
-        params.require(:achievement).permit(:name, :description, :position)
+        params.require(:project).permit(:name, :description, :position)
     end
 end
