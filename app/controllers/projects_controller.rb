@@ -46,6 +46,6 @@ class ProjectsController < ApplicationController
     end
 
     def update_params
-        params.require(:project).permit(:status, :name, :description, :position)
+        params.require(:project).permit(:status, :name, :description, :position, :level_id)
     end
 end
