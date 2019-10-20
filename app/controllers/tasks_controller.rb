@@ -47,7 +47,7 @@ class TasksController < ApplicationController
     end
 
     def update_params
-        params.require(:task).permit(:title, :description, :exercise, :project_id, :position, :status   )
+        params.require(:task).permit(:title, :description, :exercise, :project_id, :position, :status)
     end
 
 end
