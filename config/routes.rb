@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
   resources :roles, only: [:index, :show, :create, :update, :destroy]
   resources :achievements, only: [:index, :show, :create, :update, :destroy]
-  resources :users, only: [:index, :show, :update, :destroy]
+  resources :users, only: [:index, :show, :update, :destroy] do
+    resources :user_projects, only: [:index, :show, :create, :update, :destroy]
+  end
   resources :levels, only: [:index, :show, :create, :update, :destroy]
   resources :concepts, only: [:index, :show, :create, :update]
   resources :projects, only: [:index, :show, :create, :update, :destroy]
