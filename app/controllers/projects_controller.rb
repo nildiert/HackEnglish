@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
         render json: @projects, status: :ok
     end
 
-    # GET /projectss/{id}
+    # GET /projects/{id}
     def show
         @project = Project.find_by(id: params[:id])
         if @project
@@ -46,6 +46,6 @@ class ProjectsController < ApplicationController
     end
 
     def update_params
-        params.require(:project).permit(:name, :description, :position)
+        params.require(:project).permit(:status, :name, :description, :position)
     end
 end
