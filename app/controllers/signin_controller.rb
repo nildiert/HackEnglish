@@ -1,5 +1,5 @@
 class SigninController < ApplicationController
-    # ESto es provisional
+    
     protect_from_forgery with: :null_session
 
     def signin

@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
-    # Esto es provisional
-    protect_from_forgery with: :null_session
+   
+    include Secured
+    before_action :authenticate_user!, only: [:update, :index, :show, :destroy, :create]
 
     # GET /tasks/
     def index

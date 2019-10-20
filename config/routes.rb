@@ -4,10 +4,12 @@ Rails.application.routes.draw do
 
   get '/health', to: 'health#health'
   match 'signin', to: 'signin#signin', via: [:post]
+  match 'signup', to: 'signup#create', via: [:post]
+  
 
   resources :roles, only: [:index, :show, :create, :update, :destroy]
   resources :achievements, only: [:index, :show, :create, :update, :destroy]
-  resources :users, only: [:index, :show, :create, :update, :destroy]
+  resources :users, only: [:index, :show, :update, :destroy]
   resources :levels, only: [:index, :show, :create, :update, :destroy]
   resources :concepts, only: [:index, :show, :create, :update]
   resources :projects, only: [:index, :show, :create, :update, :destroy]
@@ -17,5 +19,4 @@ Rails.application.routes.draw do
   # user_project
   # task_assignment
   # check_task_assignment
-
 end
