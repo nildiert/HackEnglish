@@ -7,13 +7,13 @@ module Secured
         if headers['Authorization'].present? && headers['Authorization'].match(token_regex)
             token = headers['Authorization'].match(token_regex)[1]
             # Checking if token is for a user
-            user = User.find_by_auth_token(token)
+            user = User.find_by(auth_token: token)
 
 
             if(Current.user = user)
                 return
             end
         end
-        render json: {error: 'Unauthorized'}, status: :unauthorized
+        render json: {error: unauthorized}, status: :unauthorized
     end
 end

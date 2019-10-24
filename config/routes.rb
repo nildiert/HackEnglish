@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   resources :achievements, only: [:index, :show, :create, :update, :destroy]
   resources :users, only: [:index, :show, :update, :destroy] do
     resources :user_projects, only: [:index, :show, :create, :update, :destroy]
+    resources :user_achievements, only: [:index, :show, :create, :update, :destroy]
+  end
+
+  resources :user_projects, only: [] do
+    resources :task_assignments, only: [:index, :show, :create, :update, :destroy]
   end
   resources :levels, only: [:index, :show, :create, :update, :destroy]
   resources :concepts, only: [:index, :show, :create, :update]

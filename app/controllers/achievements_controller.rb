@@ -2,12 +2,14 @@ class AchievementsController < ApplicationController
 
     # Authentication
     include Secured
+    protect_from_forgery prepend: true
     before_action :authenticate_user!, only: [:index, :show, :create, :update, :destroy]
+    
 
     # GET /achievements/
     def index
         @achievements = Achievement.all
-        render json: @achievements, status: :ok
+        render json: @achievements, status: :ok         
     end
 
     # GET /achievements/{id}
