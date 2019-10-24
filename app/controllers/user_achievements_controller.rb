@@ -1,34 +1,34 @@
-class UserProjectsController < ApplicationController
+class UserAchievementsController < ApplicationController
 
     # sin token provitional
     protect_from_forgery with: :null_session
 
-    # GET /users/:user_id/userprojects
+    # GET /users/:user_id/user_achievements
     def index
         @user = User.find(params[:user_id])   
-        render json: @user.userprojects, status: :ok 
+        render json: @user.userAchievements, status: :ok 
     end
 
-    # CREATE /users/:user_id/userprojects
+    # CREATE /users/:user_id/user_achievements
     def create
         @user = User.find_by(id: params[:user_id])
 
         if @user
-            @project = @user.userProjects.create(create_params)
+            @achievement = @user.userAchievements.create(create_params)
             @user.reload
-            render json: @project, status: :created
+            render json: @achievement, status: :created
         else
             render json: {"error": "not exist"}, status: :not_found
         end
     end
 
-    # GET /users/:user_id/user_projects/:id
+    # GET /users/:user_id/user_achievements/:id
     def show
         @user = User.find(params[:user_id])
         if @user
-            @user_project = @user.userProjects.find_by(id: params[:id])
-            if @user_project
-                render json: @user_project, status: :ok
+            @user_achievement = @user.userAchievements.find_by(id: params[:id])
+            if @user_achievement
+                render json: @user_achievement, status: :ok
             else
                 render json: {"error": 'proyect Not Found'}, status: :not_found
             end    
@@ -37,14 +37,14 @@ class UserProjectsController < ApplicationController
         end
     end
 
-    # PUT users/:user_id/user_projects/:id
+    # PUT /users/:user_id/user_achievements/:id
     def update
         @user = User.find(params[:user_id])
         if @user
-            @user_project = @user.userProjects.find_by(id: params[:id])
-            if @user_project
-                @user_project.update(update_params)
-                render json: @user_project, status: :ok
+            @user_achievement = @user.userAchievements.find_by(id: params[:id])
+            if @user_achievement
+                @user_achievement.update(update_params)
+                render json: @user_achievement, status: :ok
             else
                 render json: {"error": 'proyect Not Found'}, status: :not_found
             end    
@@ -53,14 +53,14 @@ class UserProjectsController < ApplicationController
         end
     end
 
-    #DELETE /users/:user_id/user_projects/:id(.:format)
+    #DELETE /users/:user_id/user_achievements/:id
     def destroy
         @user = User.find(params[:user_id])
         if @user
-            @user_project = @user.userProjects.find_by(id: params[:id])
-            if @user_project
-                @user_project.destroy
-                render json: {"message": "UserProject deleted"}, status: :ok
+            @user_achievement = @user.userAchievements.find_by(id: params[:id])
+            if @user_achievement
+                @user_achievement.destroy
+                render json: {"message": "UserAchievement deleted"}, status: :ok
             else
                 render json: {"error": 'proyect Not Found'}, status: :not_found
             end
@@ -70,12 +70,13 @@ class UserProjectsController < ApplicationController
     end
 
     def create_params
-        params.require(:userProject).permit(:user_id, :project_id, :finished)
+        params.require(:userAchievement).permit(:user_id, :achievement_id, :finished)
     end
 
     def update_params
-        params.require(:userProject).permit(:user_id, :project_id, :finished, :finished_at)
+        params.require(:userAchievement).permit(:user_id, :achievement_id, :finished, :finished_at)
     end
 end
+
 
 
