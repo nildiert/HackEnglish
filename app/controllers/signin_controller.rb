@@ -6,7 +6,9 @@ class SigninController < ApplicationController
       @user = User.find_by(email: signin_params[:email])
       if @user
         if @user.password == signin_params[:password]
-          render json: {"auth_token": @user.auth_token}, status: :ok
+          render json: {"auth_token": @user.auth_token,
+                        "user_id": @user.id,
+                        "role_id": @user.role_id}, status: :ok
         else
           render json: {error: "password incorrect"}, status: :not_found
         end
