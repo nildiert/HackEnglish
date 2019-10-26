@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :task do
-    project_id { rand(1...3) }
+    project
     title { Faker::Lorem.sentence }
     description { Faker::Lorem.paragraph }
     sequence(:position)

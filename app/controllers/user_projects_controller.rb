@@ -6,7 +6,7 @@ class UserProjectsController < ApplicationController
     # GET /users/:user_id/userprojects
     def index
         @user = User.find(params[:user_id])   
-        render json: @user.userprojects, status: :ok 
+        render json: @user.userProjects, status: :ok 
     end
 
     # CREATE /users/:user_id/userprojects
