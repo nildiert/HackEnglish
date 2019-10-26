@@ -7,6 +7,8 @@ FactoryBot.define do
         profile_pic { Faker::Avatar.image }
         description { Faker::ChuckNorris.fact }
         score { rand(10...1000) }
+        auth_token { "my_token" }
+        role
     end
   end
   

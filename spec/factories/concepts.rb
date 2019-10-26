@@ -3,7 +3,7 @@ FactoryBot.define do
     status { 1 }
     title { Faker::Lorem.sentence }
     link { Faker::Internet.url }
-    position { 1 }
-    project { 1 }
+    sequence(:position)
+    project
   end
 end

@@ -1,7 +1,7 @@
 FactoryBot.define do
-    factory :user_project do
-        user_id { rand(1..10) }
-        project_id { rand(1..10) }
+    factory :userProject do
+        user
+        project
         # status { rand(0..1) }
     end
 end

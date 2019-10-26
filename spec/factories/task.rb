@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :task do
-    project_id { 1 }
+    project
     title { Faker::Lorem.sentence }
     description { Faker::Lorem.paragraph }
-    position { 1 }
+    sequence(:position)
     exercise { Faker::Lorem.paragraph }
   end
 end

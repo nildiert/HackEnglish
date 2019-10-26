@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
 
   get '/health', to: 'health#health'
+  get '/user_info/:id', to: 'user_info#show'
   match 'signin', to: 'signin#signin', via: [:post]
   match 'signup', to: 'signup#create', via: [:post]
   

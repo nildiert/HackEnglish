@@ -1,10 +1,10 @@
 FactoryBot.define do
     factory :achievement do
-        project_id { Faker::IDNumber.valid }
-        status { rand(0..1) }
+        sequence(:project_id) { |n| n }
+        status { 1 }
         name { Faker::Name.name }
         description { Faker::Lorem.sentence }
         achievement_pic { Faker::Lorem.sentence }
-        points { rand(0..4) }
+        points { rand(1...5) }
     end
 end
