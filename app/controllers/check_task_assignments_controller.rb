@@ -1,7 +1,8 @@
 class CheckTaskAssignmentsController < ApplicationController
 
-    # sin token provitional
-    protect_from_forgery with: :null_session
+    include Secured    
+    protect_from_forgery prepend: true
+    before_action :authenticate_user!, only: [:index, :show, :create, :update, :destroy]
 
     # GET /task_assigments/:task_assignment_id/check_task_assignments
     def index

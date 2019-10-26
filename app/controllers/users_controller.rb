@@ -1,9 +1,8 @@
 class UsersController < ApplicationController
 
-  include Secured
-  before_action :authenticate_user!, only: [:update, :index, :show, :destroy]
-  # ESto es provisional
-  #protect_from_forgery with: :null_session
+  include Secured    
+  protect_from_forgery prepend: true
+  before_action :authenticate_user!, only: [:index, :show, :create, :update, :destroy]
    
   # GET /users/
   def index
