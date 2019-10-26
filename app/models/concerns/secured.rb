@@ -14,6 +14,6 @@ module Secured
                 return
             end
         end
-        render json: {error: unauthorized}, status: :unauthorized
+        render json: {error: :unauthorized}, status: :unauthorized
     end
 end

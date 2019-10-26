@@ -1,7 +1,8 @@
 class TaskAssignmentsController < ApplicationController
 
-    # sin token provitional
-    protect_from_forgery with: :null_session
+    include Secured    
+    protect_from_forgery prepend: true
+    before_action :authenticate_user!, only: [:index, :show, :create, :update, :destroy]
 
     # GET /user_projects/:user_project_id/task_assignments
     def index
