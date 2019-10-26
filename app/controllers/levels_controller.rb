@@ -1,7 +1,8 @@
 class LevelsController < ApplicationController
 
     # Authentication
-    include Secured
+    include Secured    
+    protect_from_forgery prepend: true
     before_action :authenticate_user!, only: [:index, :show, :create, :update, :destroy]
 
     # GET /levels/

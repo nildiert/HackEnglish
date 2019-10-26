@@ -1,5 +1,5 @@
 class UserProjectSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :project, :finished
+  attributes :id, :user_id, :finished, :project 
 
   def project
     project = self.object.project
@@ -8,8 +8,8 @@ class UserProjectSerializer < ActiveModel::Serializer
       name: project.name,
       description: project.description,
       postion: project.position,
-      level: project.level.title,
-      task_assigments: ActiveModelSerializers::SerializableResource.new(self.object.taskAssignments, each_serializer: TaskAssignmentSerializer)
+      level: project.level.title
+      #task_assigments: ActiveModelSerializers::SerializableResource.new(self.object.taskAssignments, each_serializer: TaskAssignmentSerializer)
     }
   end
 end
