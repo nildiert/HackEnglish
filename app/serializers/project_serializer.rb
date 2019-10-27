@@ -1,16 +1,11 @@
 class ProjectSerializer < ActiveModel::Serializer
-  attributes :id, :status, :name, :description, :position, :level, :tasks
+  attributes :id, :name, :description, :position, :level, :concepts
   
   def level
-    level = self.object.level
-    {
-      id: level.id
-      title: level.title
-      description: level.description
-    }
+    level = self.object.level.title
   end
 
-  def tasks
-    self.object.tasks
+  def concepts
+    ActiveModelSerializers::SerializableResource.new(self.object.concepts, each_serializer: ConceptSerializer)
   end
 end
