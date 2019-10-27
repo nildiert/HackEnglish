@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resources :task_assignments, only: [] do
     resources :check_task_assignments, only: [:index, :show, :create, :update, :destroy]
   end
+  resources :tasks, only: [:index, :show, :create, :update]
   resources :checks, only: [:index, :show, :create, :update]
   # user_achievement
   # user_project
