@@ -5,7 +5,7 @@ role_1 = Role.create(:title => "student")
 role_2 = Role.create(:title => "admin")
 
 #create levels
-level_1 = Level.create(:title => "A1", :description => "Elementary English Course")
+level_1 = Level.create(:title => "A1 - Elementary English Course", :description => "In this course you will: Learn how to form important verbs., Talk about daily routine.")
 
 #create Achievemnets
 Achievements_list = FactoryBot.create_list(:achievement, 5)
