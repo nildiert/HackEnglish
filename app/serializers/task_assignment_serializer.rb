@@ -9,7 +9,7 @@ class TaskAssignmentSerializer < ActiveModel::Serializer
       description: task.description,
       exercise: task.exercise,
       position: task.position,
-      checks: ActiveModelSerializers::SerializableResource.new(self.object.checkTaskAssignments, each_serializer: CheckTaskAssignmentSerializer)
+      #checks: ActiveModelSerializers::SerializableResource.new(self.object.checkTaskAssignments, each_serializer: CheckTaskAssignmentSerializer)
     }
   end
 end
