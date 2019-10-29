@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/health', to: 'health#health'
   get '/user_info/:id', to: 'user_info#show'
+  get '/user_info_levels/:id', to: 'user_info_levels#index'
+  get '/user_info_level_concepts/:id', to: 'user_info_level_concepts#index'
   match 'signin', to: 'signin#signin', via: [:post]
   match 'signup', to: 'signup#create', via: [:post]
   
