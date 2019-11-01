@@ -10,6 +10,7 @@ class SignupController < ApplicationController
     render json: { message: 'Email exists!', email: @other[:email], status: :rejected }, status: :rejected
    else
     @user = User.create(create_params)
+    @user.projects << Project.find(1)
     render json: { message: "You're welcome!" }, status: :created
    end
  end
