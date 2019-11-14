@@ -13,27 +13,60 @@ HackEnglish takes gamification tools and project-based methodology to improve En
  
 ## Technologies
 <p align="center">
-  <img src="https://github.com/nildiert/HackEnglish/blob/alejo/images/Technologies_BackEnd.png">
+  <img width="210" height="380" src="https://github.com/nildiert/HackEnglish/blob/alejo/images/Technologies_BackEnd.png">
 </p>
-<!--![Technologies Back-End](https://github.com/nildiert/HackEnglish/blob/alejo/images/Technologies_BackEnd.png)-->
 
 
 ## Architecture:
-![Architecture](https://whimsical.com/XYLFeNrT4x4KFiwoh3jpjC)
+  [Architecture](https://whimsical.com/XYLFeNrT4x4KFiwoh3jpjC)
 
-* Configuration
+## Models
+<p align="center">
+  <img width="400" height="380" src="https://github.com/nildiert/HackEnglish/blob/alejo/images/Models.jpg">
+</p>
 
-* Database creation
+## Development
+<p align="center">
+  <img width="370" height="244" src="https://github.com/nildiert/HackEnglish/blob/alejo/images/Development.jpg">
+</p>
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Controllers and routes
+File/Folder 	   | HTTP Verb       | Purpose
+--------------- | --------------- | -------------
+achievements_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+application_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+check_task_assignments_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+checks_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+concepts_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+health_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+levels_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+projects_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+roles_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+signin_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+signup_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+task_assignments_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+tasks_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+user_achievements_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+user_info_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+user_projects_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
+users_controller.rb | GET, POST, PUT, DELETE |
+--------------- | --------------- | -------------
 
 # Commands to install
 
@@ -43,4 +76,3 @@ HackEnglish takes gamification tools and project-based methodology to improve En
 # Command to test
 
     bundle exec rspec
-
