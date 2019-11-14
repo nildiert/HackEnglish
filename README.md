@@ -1,7 +1,7 @@
+<a align="center" href="http://hackenglish.me/">
+  <img width="850" height="600" src="https://github.com/nildiert/HackEnglish/blob/alejo/images/HackEnglish(1).png">
+</a>
 
-<p align="center" href="http://hackenglish.me/">
-  <img src="https://github.com/nildiert/HackEnglish/blob/alejo/images/HackEnglish(1).png">
-</p>
 #  HackEnglish
 
 ## Description
