@@ -1,5 +1,5 @@
 <a align="center" href="http://hackenglish.me/">
-  <img width="850" height="600" src="https://github.com/nildiert/HackEnglish/blob/alejo/images/HackEnglish(1).png">
+  <img width="820" height="650" src="https://github.com/nildiert/HackEnglish/blob/alejo/images/HackEnglish(1).png">
 </a>
 
 #  HackEnglish
