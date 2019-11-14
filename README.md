@@ -12,7 +12,7 @@ HackEnglish takes gamification tools and project-based methodology to improve En
  <!--Image here-->
  
 ## Technologies
-![Technologies Back-End](https://docs.google.com/drawings/d/1HJk3YvpqOYbQbdNbnxwyo6MJj5OrpdJgISK0XSA7eQU/edit?usp=sharing)
+![Technologies Back-End](https://drive.google.com/open?id=1w-xR-cUgDUVrnX95JSqxJTUp9NNDnAdc)
 
 
 ## Architecture:
