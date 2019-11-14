@@ -12,7 +12,10 @@ HackEnglish takes gamification tools and project-based methodology to improve En
  <!--Image here-->
  
 ## Technologies
-![Technologies Back-End](https://github.com/nildiert/HackEnglish/blob/alejo/images/Technologies_BackEnd.png)
+<p align="center">
+  <img src="https://github.com/nildiert/HackEnglish/blob/alejo/images/Technologies_BackEnd.png">
+</p>
+<!--![Technologies Back-End](https://github.com/nildiert/HackEnglish/blob/alejo/images/Technologies_BackEnd.png)-->
 
 
 ## Architecture:
