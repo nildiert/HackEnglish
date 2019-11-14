@@ -1,6 +1,6 @@
 
 <p align="center" href="http://hackenglish.me/">
-  <img src="images/HackEnglish(1).png">
+  <img src="https://github.com/nildiert/HackEnglish/blob/alejo/images/HackEnglish(1).png">
 </p>
 #  HackEnglish
 
