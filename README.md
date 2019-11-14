@@ -1,3 +1,7 @@
+
+<p align="center" href="http://hackenglish.me/">
+  <img src="images/HackEnglish(1).png">
+</p>
 #  HackEnglish
 
 ## Description
@@ -12,7 +16,7 @@ HackEnglish takes gamification tools and project-based methodology to improve En
 * [Architecture](#Architecture)
 * [Models](#Models)
 * [Deployment](#Deployment)
-* [Controllers and routes](#Controllers-and-routes)
+* [Controllers and routes](#Controllers-/-routes)
 * [Serializers](#Serializers)
 * [Commands to install](#Commands-to-install)
 
