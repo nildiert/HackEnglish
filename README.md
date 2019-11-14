@@ -1,13 +1,22 @@
-# README
+#  HackEnglish
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+Hack English is a platform that allows you to learn and reinforce your knowledge of English for level A1 of the common European framework.
 
-* Ruby version
+HackEnglish takes gamification tools and project-based methodology to improve English learning, through challenges, exercises and support from its own community.
 
-* System dependencies
+## Landingpage
+[HackEnglish](http://hackenglish.me/)
+
+ <!--Image here-->
+ 
+## Technologies
+![Technologies Back-End](https://drive.google.com/open?id=1w-xR-cUgDUVrnX95JSqxJTUp9NNDnAdc/Technologies_BackEnd.png)
+
+
+## Architecture:
+![Architecture](https://whimsical.com/XYLFeNrT4x4KFiwoh3jpjC)
 
 * Configuration
 
