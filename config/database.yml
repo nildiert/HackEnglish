@@ -6,6 +6,10 @@
 #
 default: &default
   adapter: mysql2
+  #host: 172.17.0.3
+  #port: 3306
+  #username: <%= ENV["LOGNAME"] %>
+  #password: <%= ENV["LOGNAME"] %>
   username: <%= ENV["USER_ENV"] %>
   password: <%= ENV["PWD_ENV"] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>

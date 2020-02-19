@@ -1,6 +1,8 @@
 class RolesController < ApplicationController
-    # ESto es provisional
-    protect_from_forgery with: :null_session
+
+    include Secured    
+    protect_from_forgery prepend: true
+    before_action :authenticate_user!, only: [:index, :show, :create, :update, :destroy]
 
     # GET /roles/
     def index

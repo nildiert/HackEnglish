@@ -76,7 +76,6 @@ File/Folder 	   |  Purpose
 /user_project_serializer.rb |
 
 
-### Commands to install
+### Commands to Deploy
 
-    bundle install
-    rails generate rspec:install
+[Deployment.md](https://github.com/nildiert/HackEnglish/blob/alejo/DEPLOYMENT.md)
